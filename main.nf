@@ -2,7 +2,7 @@
 nextflow.enable.dsl=2 
 
 process sayHello {
-  label: 'otherCompute'
+  label 'otherCompute'
   input: 
     val x
   output:
