@@ -2,7 +2,7 @@
 nextflow.enable.dsl=2 
 
 process sayHello {
-  withLabel:otherCompute {queue = 'tower-pool-2e0IJBeFUO79g179Jybj44'}
+  label: 'otherCompute'
   input: 
     val x
   output:
@@ -17,3 +17,4 @@ process sayHello {
 workflow {
   Channel.of('Bonjour', 'Ciao', 'Hello', 'Hola', 'resume pipeline') | sayHello | view
 }
+
