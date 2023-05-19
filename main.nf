@@ -32,13 +32,3 @@ workflow {
   Channel.of('Bonjour', 'Ciao', 'Hello', 'Hola', 'resume pipeline') | testingOtherQueue | view
 }
 
-process {
-  withLabel: 'otherQueue' {
-  queue = 'TowerForge-2MaAHE74Nnx4ZY5daq2E1v-head'
-  aws.batch.schedulingPriority = 100
-}
-  withLabel: 'secondQueue' {
-    queue = 'TowerForge-qAVkhZzpwKaUeogrDj518-work'
-    aws.batch.schedulingPriority = 50
-}
-}
