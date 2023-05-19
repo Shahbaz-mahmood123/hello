@@ -15,7 +15,7 @@ process sayHello {
 }
 
 process testingOtherQueue {
-  label: 'secondQueue'
+  label 'secondQueue'
   input: 
     val x
   output:
