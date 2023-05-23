@@ -2,6 +2,8 @@
 nextflow.enable.dsl=2 
 
 process sayHello {
+  publishDir '/home/shahbaz'
+  publishDir '/home/shahzeb'
   input: 
     val x
   output:
