@@ -2,7 +2,6 @@
 nextflow.enable.dsl=2 
 
 process sayHello {
-  label 'otherQueue'
   input: 
     val x
   output:
@@ -15,7 +14,6 @@ process sayHello {
 }
 
 process testingOtherQueue {
-  label 'secondQueue'
   input: 
     val x
   output:
@@ -28,7 +26,7 @@ process testingOtherQueue {
 }
 
 workflow {
-  Channel.of('Bonjour', 'Ciao', 'Hello', 'Hola', 'resume pipeline') | sayHello | view
+  Channel.of('Bonjour', 'Ciao', 'Hello', 'Hola', 'Test if tower picked up new commit', 'resume pipeline') | sayHello | view
   Channel.of('Bonjour', 'Ciao', 'Hello', 'Hola', 'resume pipeline') | testingOtherQueue | view
 }
 
