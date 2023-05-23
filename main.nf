@@ -10,7 +10,7 @@ process sayHello {
     stdout
   script:
     """
-    echo '$x test!'
+    echo '$x test!' > hello_world.txt
     """
     
 }
