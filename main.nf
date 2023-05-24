@@ -2,17 +2,16 @@
 nextflow.enable.dsl=2 
 
 process sayHello {
-  publishDir '/home/shahbaz'
-  publishDir '/home/shahzeb'
-  input: 
-    val x
   output:
-    stdout
+  file "hello.txt"
+
   script:
-    """
-    echo '$x test!' > hello_world.txt
-    """
-    
+  """
+  echo 'Hello, World!' > hello.txt
+  """
+
+  publishDir 'results'
+  publishDir 'results_number_2'
 }
 
 process testingOtherQueue {
