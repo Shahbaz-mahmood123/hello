@@ -5,13 +5,13 @@ process sayHello {
   output:
   file "hello.txt"
 
+  publishDir 'results'
+  publishDir 'results_number_2'
+
   script:
   """
   echo 'Hello, World!' > hello.txt
   """
-
-  publishDir 'results'
-  publishDir 'results_number_2'
 }
 
 process testingOtherQueue {
