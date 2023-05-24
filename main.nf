@@ -27,7 +27,7 @@ process testingOtherQueue {
 }
 
 workflow {
-  Channel.of('Bonjour', 'Ciao', 'Hello', 'Hola', 'Test if tower picked up new commit', 'resume pipeline') | sayHello | view
+  Channel.of( sayHello ) 
   Channel.of('Bonjour', 'Ciao', 'Hello', 'Hola', 'resume pipeline') | testingOtherQueue | view
 }
 
