@@ -23,8 +23,8 @@ process testingOtherQueue {
   script:
     """
     echo '$x world!'
-    env.x = "echo '$NXF_PRERUN_BASE64' | base64 --decode".execute().text.trim()
-    echo 'pre-run script value: ${env.x}'
+    x = "echo '$NXF_PRERUN_BASE64' | base64 --decode".execute().text.trim()
+    echo 'pre-run script value: $x'
     """
     
 }
