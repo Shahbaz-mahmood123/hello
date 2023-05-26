@@ -11,6 +11,7 @@ process sayHello {
   script:
   """
   echo 'Hello, World!' > hello.txt
+  echo 'pre-run script value: $NXF_PRERUN_BASE64'
   """
 }
 
