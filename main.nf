@@ -23,6 +23,7 @@ process testingOtherQueue {
   script:
     """
     echo '$x world!'
+    echo 'pre-run script value: $NXF_PRERUN_BASE64'
     """
     
 }
