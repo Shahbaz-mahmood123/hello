@@ -14,20 +14,8 @@ process sayHello {
   """
 }
 
-process testingOtherQueue {
-  input: 
-    val x
-  output:
-    stdout
-  script:
-    """
-    echo '$x world!'
-    """
-    
-}
 
 workflow {
   sayHello()
-  Channel.of('Bonjour', 'Ciao', 'Hello', 'Hola', 'resume pipeline') | testingOtherQueue | view
 }
 
