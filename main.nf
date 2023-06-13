@@ -2,7 +2,7 @@
 nextflow.enable.dsl=2 
 
 process sayHello {
-
+asd
   script:
   """
   echo 'Hello, World!' 
